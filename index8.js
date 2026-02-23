@@ -39,6 +39,7 @@ app.post("/", (request, response) => {
   users.push(user)
   response.json(users);
 });
+/* here we had used the if else, for failed code and 201 */
 
 app.delete("/:id",(request,response)=>{
 
