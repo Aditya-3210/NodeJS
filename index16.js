@@ -1,23 +1,3 @@
-/* import express from "express"
-const app = express()
-app.listen(8082, ()=>{
-    console.log("server started...")
-})
-
-app.use(express.json())
-
-app.post("/signup", (req, res) => {
-  const body = req.body;
-  users.push(body);
-  res.json(users);
-});
-app.get("/users", (req, res) => {
-  res.json(users);
-});
-
-const users = []; */
-
-
 import express from "express";
 import bcrypt from "bcrypt";
 
@@ -55,3 +35,7 @@ app.post("/login", async (req, res) => {
 app.get("/users", (req, res) => {
   res.json(users);
 });
+
+app.get("/", (req,res)=>{
+    res.send("Hello World");
+})
